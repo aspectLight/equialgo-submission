@@ -1,5 +1,7 @@
 # ÉquiAlgo — audit et correction du biais régional
 
+Ahmed Sami Benabbou — équipe Aspect
+
 Réponse au défi ÉquiAlgo (IVADO / CodeML 2026). Le modèle en production accorde une bourse à 48,4 % des
 candidat·es des grands centres et à 27,3 % de celles et ceux des régions éloignées. L'écart de 21 points
 n'est pas expliqué par les dossiers : le comité historique retire environ 2,2 en logit aux demandes des
@@ -17,7 +19,6 @@ taux d'octroi de 0,410 (0,409 dans les grands centres, 0,411 dans les régions �
 | `audit_rapport.ipynb` | l'audit : mesure de l'écart, règle du comité, décomposition, proxys, métrique retenue, surveillance, gouvernance |
 | `model_corrige.py` | l'atténuation : balayage des trois familles de contraintes, front de Pareto, écriture de `predictions.csv` |
 | `presentation.pdf` | le support du pitch de cinq minutes, douze diapositives en 16:9 |
-| `presentation.pptx` | le même support, modifiable, avec les notes de présentation |
 
 ## Reproduire
 
