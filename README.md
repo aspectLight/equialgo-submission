@@ -16,7 +16,7 @@ taux d'octroi de 0,410 (0,409 dans les grands centres, 0,411 dans les régions �
 | `predictions.csv` | décisions pour les 4 000 candidat·es d'évaluation, taux d'octroi 0,410 |
 | `audit_rapport.ipynb` | l'audit : mesure de l'écart, règle du comité, décomposition, proxys, métrique retenue, surveillance, gouvernance |
 | `model_corrige.py` | l'atténuation : balayage des trois familles de contraintes, front de Pareto, écriture de `predictions.csv` |
-| `presentation.pdf` | le support du pitch |
+| `presentation.pdf` | le support du pitch de cinq minutes, douze pages en 16:9 (source : `presentation.html`) |
 
 ## Reproduire
 
@@ -28,6 +28,13 @@ pip install -r requirements.txt
 jupyter notebook audit_rapport.ipynb   # l'audit, de bout en bout
 python model_corrige.py                # le balayage, les figures, predictions.csv
 python -m pytest -q tests              # les fonctions de mesure sur des cas vérifiés à la main
+```
+
+`presentation.pdf` se régénère à partir de `presentation.html`, qui embarque ses polices et ne
+dépend d'aucun réseau :
+
+```bash
+chrome --headless=new --no-pdf-header-footer --print-to-pdf=presentation.pdf presentation.html
 ```
 
 Python 3.10 ou plus récent. `model_corrige.py` prend quelques minutes : il valide 31 règles de décision
